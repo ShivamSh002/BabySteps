@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  margin: 20px;
+  margin-inline: 4rem;
+  justify-content: space-between;
+  text-align: center;
+  gap:50px;
+  p {
+    font-size: 25px;
+    font-weight: 900;
+    font-family: cursive;
+    cursor: pointer;
+    font-weight: bold;
+    background: linear-gradient(to right, #004c8c, #00d6a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

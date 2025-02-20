@@ -1,0 +1,52 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 50px;
+  flex-wrap: wrap;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 52px;
+  font-weight: 600;
+  height: 60vh;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  background: linear-gradient(to right, #004c8c, #00d6a3);
+  border-radius: 8%;
+}
+
+.date {
+  margin-top: 30px;
+  width: 200%;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+  margin-left: -55px;
+}
+
+.pill {
+  text-align: center;
+  margin-top: 20px;
+
+  .pillbutton {
+    margin: 10px;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  .selected {
+    background-color: #004c8c;
+    color: white;
+  }
+}

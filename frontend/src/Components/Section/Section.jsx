@@ -10,6 +10,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import ModalForm from "../ModalForm/ModalForm";
 
+
 const style = {
   position: 'absolute',
   top: '50%',
@@ -27,6 +28,8 @@ const Section = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+
 
   const doctors = [
     { label: "Dr. John Doe", id: 1 },

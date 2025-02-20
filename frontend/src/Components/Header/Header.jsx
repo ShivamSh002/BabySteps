@@ -1,8 +1,11 @@
 import React from "react";
 import styles from "./Header.module.css";
 import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
 
-const header = () => {
+
+const Header = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.header}>
       <p> BabySteps</p>
@@ -18,7 +21,7 @@ const header = () => {
           background: "linear-gradient(to right, #003366, #00b38f)", 
         },
       }}
-   
+      onClick={() => navigate("/appointment")} 
     >
       My Appointments
     </Button>
@@ -26,4 +29,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;

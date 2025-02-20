@@ -1,12 +1,11 @@
-import React from "react";
-import styles from "./Header.module.css";
+import React from 'react'
 import Button from "@mui/material/Button";
 
-const header = () => {
+const Appointment = () => {
   return (
-    <div className={styles.header}>
-      <p> BabySteps</p>
-      <Button
+    <div>
+        <div><p>Appointment</p>
+        <Button
       variant="contained"
       sx={{
         height:"50px",
@@ -20,10 +19,11 @@ const header = () => {
       }}
    
     >
-      My Appointments
+      Appointments
     </Button>
+        </div>
     </div>
-  );
-};
+  )
+}
 
-export default header;
+export default Appointment

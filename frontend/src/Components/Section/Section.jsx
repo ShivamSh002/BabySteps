@@ -3,8 +3,20 @@ import styles from "./Section.module.css";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import Button from "@mui/material/Button";
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
+import Box from '@mui/material/Box';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import ModalForm from "../ModalForm/ModalForm";
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  p: 4,
+};
 
 const Section = () => {
   const [selectedDoctor, setSelectedDoctor] = useState(null);
@@ -12,6 +24,9 @@ const Section = () => {
   const [timeSlots, setTimeSlots] = useState([]);
   const [selectedSlot, setSelectedSlot] = useState(null);
   const [submitBtn, setSubmitBtn] = useState(false);
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   const doctors = [
     { label: "Dr. John Doe", id: 1 },
@@ -125,10 +140,21 @@ const Section = () => {
               backgroundColor: "#f0f0f0",
             },
           }}
+          onClick={handleOpen}
           disabled={submitBtn ? false : true}
         >
-          <span>Book Appointment</span>
+          <span>Book Slot</span>
         </Button>
+        <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+         <ModalForm/>
+        </Box>
+      </Modal>
       </div>
     </div>
   );

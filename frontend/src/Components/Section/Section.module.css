@@ -20,7 +20,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 45%;
+  width:620px;
+  height: 60vh;
   background: linear-gradient(to right, #004c8c, #00d6a3);
   border-radius: 8%;
 }
